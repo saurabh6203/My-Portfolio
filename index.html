@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurabh Singh's Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init("z2FiH0AusosY_4TnD");
+
+document.getElementById("contactForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const btn = document.querySelector(".submit-btn");
+
+    btn.textContent = "Sending...";
+    btn.disabled = true;
+
+    emailjs.sendForm(
+        "service_1bgfa04",
+        "template_joyiyc6",
+        this
+    )
+    .then(function(){
+
+        btn.style.display = "none";
+        document.getElementById("sentMsg").style.display = "block";
+
+    })
+    .catch(function(error){
+
+        console.log(error);
+        alert("Message failed to send.");
+
+        btn.textContent = "Send Message →";
+        btn.disabled = false;
+
+    });
+
+});
+</script>
+</head>
+<body>
+    
+
+        <nav id="mainNav">
+  <div class="nav-brand">SKS.</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#training">Training</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hbg" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+
+<section id="hero">
+  <div class="blob1"></div>
+  <div class="blob2"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge"><span class="badge-dot"></span>Available for Opportunities</div>
+      <h1 class="hero-name">Saurabh Kumar<br><span class="name-gradient">Singh</span></h1>
+      <p class="hero-role"><strong>Web Developer</strong> &amp; MCA Student<br>Building smart, user-focused web applications</p>
+      <div class="typing-row"><span id="typed"></span></div>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">View Projects &#8595;</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+    </div>
+    <div class="photo-wrap">
+      <div class="dot-grid tl"></div>
+      <div class="dot-grid br"></div>
+      <div class="photo-ring"></div>
+      <div class="side-chips">
+        <div class="chip"><div class="chip-dot"></div>3+ Projects</div>
+        <div class="chip"><div class="chip-dot"></div>Full-Stack Web Dev</div>
+        <div class="chip"><div class="chip-dot"></div>MCA Student</div>
+      </div>
+      <div class="photo-card">
+        <img src="images/MyPic.png" alt="Saurabh Kumar Singh"/>
+        <div class="photo-overlay">
+          <div class="photo-tag">Web Developer</div>
+          <div class="photo-loc">&#128205; Varanasi, India</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec" id="about">
+  <div class="reveal"><div class="eyebrow">01 &mdash; About Me</div><h2 class="sec-title">Who I Am</h2></div>
+  <div class="about-grid">
+    <div class="reveal left">
+      <p class="about-p">I'm a passionate Web Developer currently pursuing my <strong style="color:var(--text)">MCA at School of Management Sciences, Varanasi</strong>. With a strong foundation across the full stack, I love turning ideas into elegant, functional web experiences.</p>
+      <p class="about-p">From healthcare portals to AI-driven examination systems, I build solutions that solve real problems. I'm always exploring new technologies &mdash; currently diving deep into <strong style="color:var(--cyan)">Data Science &amp; AI</strong>.</p>
+      <div class="about-highlights">
+        <div class="hi"><span class="hi-icon">&#127919;</span><div><div class="hi-label">Goal Oriented</div><div class="hi-sub">Growth-focused</div></div></div>
+        <div class="hi"><span class="hi-icon">&#129504;</span><div><div class="hi-label">Quick Learner</div><div class="hi-sub">Always upskilling</div></div></div>
+        <div class="hi"><span class="hi-icon">&#9997;&#65039;</span><div><div class="hi-label">Quote Writer</div><div class="hi-sub">Creative thinker</div></div></div>
+        <div class="hi"><span class="hi-icon">&#127758;</span><div><div class="hi-label">Traveller</div><div class="hi-sub">Loves exploring</div></div></div>
+      </div>
+    </div>
+    <div class="reveal right">
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-num">3+</div><div class="stat-lbl">Projects</div></div>
+        <div class="stat-box"><div class="stat-num">5+</div><div class="stat-lbl">Certificates</div></div>
+        <div class="stat-box"><div class="stat-num">2+</div><div class="stat-lbl">Yrs Coding</div></div>
+      </div>
+      <div class="eyebrow" style="margin-bottom:.7rem;">Hobbies</div>
+      <div class="hobbies">
+        <span class="hobby">&#9997;&#65039; Writing Quotes</span>
+        <span class="hobby">&#127760; Internet Surfing</span>
+        <span class="hobby">&#9992;&#65039; Travelling</span>
+        <span class="hobby">&#128218; Learning</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div id="skills"><div id="skills-bg"><div class="skills-inner">
+  <div class="reveal"><div class="eyebrow">02 &mdash; Skills</div><h2 class="sec-title">Technical Arsenal</h2></div>
+  <div class="sk-grid reveal">
+    <div class="sk-card">
+      <div class="sk-header">&#128187; Languages</div>
+      <div class="sk-pills"><span class="pill">Python</span><span class="pill">JavaScript</span><span class="pill">C (Basic)</span><span class="pill">SQL</span></div>
+    </div>
+    <div class="sk-card">
+      <div class="sk-header">&#128444;&#65039; Frontend</div>
+      <div class="sk-pills"><span class="pill g">HTML5</span><span class="pill g">CSS3</span><span class="pill g">Bootstrap</span><span class="pill g">React JS</span><span class="pill g">jQuery</span></div>
+    </div>
+    <div class="sk-card">
+      <div class="sk-header">&#9881;&#65039; Backend &amp; DB</div>
+      <div class="sk-pills"><span class="pill a">Flask</span><span class="pill a">ASP.NET MVC</span><span class="pill a">Node JS</span><span class="pill a">Express JS</span><span class="pill a">MongoDB</span><span class="pill a">MS SQL</span></div>
+    </div>
+    <div class="sk-card">
+      <div class="sk-header">&#128301; Exploring</div>
+      <div class="sk-pills"><span class="pill">Data Science</span><span class="pill">AI / ML</span><span class="pill">MERN Stack</span><span class="pill">Pandas</span><span class="pill">Matplotlib</span></div>
+    </div>
+  </div>
+</div></div></div>
+
+
+<section class="sec" id="projects">
+  <div class="reveal"><div class="eyebrow">03 &mdash; Projects</div><h2 class="sec-title">Things I've Built</h2></div>
+  <div class="proj-grid reveal">
+    <div class="proj-card">
+  <div class="proj-top">
+    <span class="proj-num">PROJECT 01</span>
+    <span class="proj-icon">&#129302;</span>
+  </div>
+
+  <div class="proj-title">Online Examination System</div>
+
+  <div class="proj-sub">E-ExamPortal &middot; Jan 2026 – Present</div>
+
+  <p class="proj-desc">
+    Currently developing an online examination platform using ASP.NET MVC to streamline exam management, student registration, test conduction, and result processing. The system focuses on providing a secure, user-friendly, and efficient examination experience, with plans to integrate AI-based features in future phases.
+  </p>
+
+  <div class="proj-tags">
+    <span class="ptag">ASP.NET MVC</span>
+    <span class="ptag">C#</span>
+    <span class="ptag">MS SQL Server</span>
+    <span class="ptag">Bootstrap</span>
+    <span class="ptag">jQuery</span>
+  </div>
+</div>
+    <div class="proj-card">
+      <div class="proj-top"><span class="proj-num">PROJECT 02</span><span class="proj-icon">&#127973;</span></div>
+      <div class="proj-title">Healthcare Service Portal</div>
+      <div class="proj-sub">Service Portal Web App &middot; March 2026</div>
+      <p class="proj-desc">Web portal enabling patients to view doctor details, manage patient records, and access appointment services through a clean, organized interface built with ASP.NET MVC.</p>
+      <div class="proj-tags"><span class="ptag">ASP.NET MVC</span><span class="ptag">C#</span><span class="ptag">MS SQL</span><span class="ptag">Bootstrap</span><span class="ptag">jQuery</span></div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-top"><span class="proj-num">PROJECT 03</span><span class="proj-icon">&#129504;</span></div>
+      <div class="proj-title">MindIndex</div>
+      <div class="proj-sub">Mental Health Self-Assessment &middot; July 2025</div>
+      <p class="proj-desc">Mental health assessment app with data science visualizations using Pandas and Matplotlib, helping users understand their well-being patterns via a Flask web interface.</p>
+      <div class="proj-tags"><span class="ptag">Flask</span><span class="ptag">Python</span><span class="ptag">Pandas</span><span class="ptag">Matplotlib</span><span class="ptag">Bootstrap</span></div>
+    </div>
+  </div>
+    
+</section>
+
+
+<section class="sec" id="training">
+  <div class="reveal"><div class="eyebrow">04 &mdash; Training</div><h2 class="sec-title">Workshops &amp; Trainings</h2></div>
+  <div class="tl reveal">
+    <div class="tl-item"><div class="tl-dot"></div><div class="tl-badge">10 Days</div>
+      <div class="tl-title">MERN Stack Workshop</div>
+      <div class="tl-org">Kamadgiri Software Solutions PVT. LTD. &middot; Chitrakoot, Varanasi</div>
+      <p class="tl-body">Hands-on training covering MongoDB, Express.js, React.js, and Node.js for end-to-end full-stack web development.</p>
+    </div>
+    <div class="tl-item"><div class="tl-dot"></div><div class="tl-badge">2 Months</div>
+      <div class="tl-title">Python with Data Science &amp; AI &mdash; Summer internship</div>
+      <div class="tl-org">Kamadgiri Software Solutions PVT. LTD. &middot; Chitrakoot</div>
+      <p class="tl-body">Intensive summer program covering Python programming, data science workflows, machine learning concepts, and AI fundamentals.</p>
+    </div>
+    <div class="tl-item"><div class="tl-dot"></div><div class="tl-badge">8 Days</div>
+      <div class="tl-title">ASP.NET MVC Workshop</div>
+      <div class="tl-org">Kamadgiri Software Solutions PVT. LTD. &middot; Chitrakoot, Varanasi</div>
+      <p class="tl-body">Deep-dive into enterprise web application development using ASP.NET MVC framework with C# and Microsoft SQL Server.</p>
+    </div>
+    <div class="tl-item"><div class="tl-dot"></div><div class="tl-badge">7 Days</div>
+      <div class="tl-title">Problem Solving &amp; Logical Thinking Using Python</div>
+      <div class="tl-org">Minicimex &middot; Varanasi</div>
+      <p class="tl-body">Workshop on computational thinking, algorithmic problem-solving, and Python-based logic implementation.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec" id="certs" style="padding-top:0;">
+  <div class="reveal"><div class="eyebrow">05 &mdash; Certifications</div><h2 class="sec-title">Credentials &amp; Achievements</h2></div>
+  <div class="cert-grid reveal">
+    <div class="cert-card "><div class="cert-ico">🏆</div><div><div class="cert-name">Tech Marathon – 24 Hrs Techno Brain Race</div><div class="cert-src">School of Management Sciences, Varanasi · April 2026</div></div></div>
+    <div class="cert-card"><div class="cert-ico">&#9749;</div><div><div class="cert-name">Java Basics for Beginners</div><div class="cert-src">Udemy &middot; Jan 2025</div></div></div>
+    <div class="cert-card"><div class="cert-ico">&#128013;</div><div><div class="cert-name">Python for Beginners</div><div class="cert-src">Simplilearn SkillUp &middot; Jan 2025</div></div></div>
+    <div class="cert-card"><div class="cert-ico">&#127807;</div><div><div class="cert-name">Elevate &mdash; Personality Development</div><div class="cert-src">Prince Grover &middot; April &amp; Sept 2025</div></div></div>
+    <div class="cert-card"><div class="cert-ico">&#127942;</div><div><div class="cert-name">Code Sniffer &mdash; Coding Competition</div><div class="cert-src">School of Management Sciences &middot; Sept 2024</div></div></div>
+  </div>
+</section>
+
+
+<section class="sec" id="education" style="padding-top:0;">
+  <div class="reveal"><div class="eyebrow">06 &mdash; Education</div><h2 class="sec-title">Academic Background</h2></div>
+  <div class="edu-list reveal">
+    <div class="edu-card">
+      <div class="edu-year">NOW</div>
+      <div><div class="edu-deg">Master of Computer Applications (MCA)</div><div class="edu-univ">School of Management Sciences, Varanasi</div></div>
+      <div class="edu-pct">&mdash;</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-year">2023</div>
+      <div><div class="edu-deg">B.Sc. Physics (Honours)</div><div class="edu-univ">Veer Kunwar Singh University, Bihar</div></div>
+      <div class="edu-pct">70.13%</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-year">2019</div>
+      <div><div class="edu-deg">Intermediate (12th)</div><div class="edu-univ">BSEB Patna, Bihar</div></div>
+      <div class="edu-pct">71.40%</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-year">2017</div>
+      <div><div class="edu-deg">High School (10th)</div><div class="edu-univ">BSEB Patna, Bihar</div></div>
+      <div class="edu-pct">62.80%</div>
+    </div>
+  </div>
+</section>
+
+
+<div id="contact"><div id="contact-bg"><div class="contact-inner">
+  <div class="reveal"><div class="eyebrow">07 &mdash; Contact</div><h2 class="sec-title">Let's Work Together</h2></div>
+  <div class="contact-grid">
+    <div class="contact-intro reveal left">
+      <p>Open to internships, freelance projects, and full-time opportunities. If you have an idea you'd like to bring to life &mdash; let's talk!</p>
+
+      <div class="c-links">
+        <a href="mailto:saurabhsingh79621@gmail.com" class="c-link">
+          <div class="c-ico">&#128231;</div>
+          <div><div class="c-lbl">Email</div><div class="c-val">saurabhsingh79621@gmail.com</div></div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/saurabh-kumar-singh0505/" target="_blank" class="c-link">
+          <div class="c-ico">&#128279;</div>
+          <div><div class="c-lbl">LinkedIn</div><div class="c-val">saurabh-kumar-singh0505</div></div>
+        </a>
+
+        <a href="https://github.com/saurabh6203" target="_blank" class="c-link">
+          <div class="c-ico">&#128187;</div>
+          <div><div class="c-lbl">GitHub</div><div class="c-val">github.com/saurabh6203</div></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="reveal right">
+
+      <form class="contact-form" id="contactForm">
+
+        <div class="form-row">
+          <div class="fg">
+            <label>Your Name</label>
+            <input type="text" name="name" placeholder="Your good name" required>
+          </div>
+
+          <div class="fg">
+            <label>Your Email</label>
+            <input type="email" name="email" placeholder="xyz@email.com" required>
+          </div>
+        </div>
+
+        <div class="fg">
+          <label>Subject</label>
+          <input type="text" name="title" placeholder="Project Inquiry" required>
+        </div>
+
+        <div class="fg">
+          <label>Message</label>
+          <textarea name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          Send Message &#8594;
+        </button>
+
+        <div class="sent-msg" id="sentMsg">
+          &#10003; Message sent! I'll get back to you soon.
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div></div></div>
+
+<footer>
+  <p>Designed &amp; Built by <span>Saurabh Kumar Singh</span> &nbsp;&middot;&nbsp; 2026 &nbsp;&middot;&nbsp; All rights reserved</p>
+</footer>
+
+<script>
+function toggleNav(){
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('hbg').classList.toggle('open');
+}
+window.addEventListener('scroll',function(){
+  document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>40);
+  var ids=['about','skills','projects','training','certs','education','contact'];
+  var cur='';
+  ids.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el&&window.scrollY>=el.offsetTop-130) cur=id;
+  });
+  document.querySelectorAll('.nav-links a').forEach(function(a){
+    var h=a.getAttribute('href').replace('#','');
+    a.classList.toggle('active',h===cur);
+  });
+});
+var phrases=['Full Stack Developer','Python', ' ASP.NET MVC','Flask','MCA @ SMS Varanasi','Problem Solver'];
+var pi=0,ci=0,del=false;
+function type(){
+  var phrase=phrases[pi];
+  var el=document.getElementById('typed');
+  if(!del){
+    el.textContent=phrase.slice(0,++ci);
+    if(ci===phrase.length){del=true;setTimeout(type,1800);return;}
+  } else {
+    el.textContent=phrase.slice(0,--ci);
+    if(ci===0){del=false;pi=(pi+1)%phrases.length;}
+  }
+  setTimeout(type,del?55:100);
+}
+type();
+var obs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}
+  });
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+emailjs.init("z2FiH0AusosY_4TnD");
+
+document.getElementById("contactForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const btn = document.querySelector(".submit-btn");
+
+    btn.textContent = "Sending...";
+    btn.disabled = true;
+
+    emailjs.sendForm(
+        "service_1bgfa04",
+        "template_joyiyc6",
+        this
+    )
+    .then(function(){
+
+    document.getElementById("contactForm").reset();
+
+    document.getElementById("sentMsg").style.display = "block";
+
+    setTimeout(function(){
+
+        document.getElementById("sentMsg").style.display = "none";
+
+        btn.textContent = "Send Message →";
+        btn.disabled = false;
+
+    }, 3000);
+
+})
+
+});
+
+</script>
+
+
+</body>
+</html>
